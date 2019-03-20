@@ -13,8 +13,8 @@ const logDriversByHometown = function (array, hometown) {
   });
 };
 
-const driversByRevenue = function (drivers) {
-  return drivers.slice().sort(function (driverOne, driverTwo) {
+const driversByRevenue = function (person) {
+  return person.slice().sort(function (driverOne, driverTwo) {
     return driverOne.revenue - driverTwo.revenue;
   });
 };
