@@ -19,3 +19,18 @@ const driversByRevenue = function (person) {
   });
 };
 
+const driversByName = function (person) {
+  return person.slice().sort(function (driverOne, driverTwo) {
+    return driverOne.name.localeCompare(driverTwo.name);
+  });
+};
+
+const totalRevenue = function (person) {
+  return person.reduce(function (total, currentDriver) {
+    return currentDriver.revenue + total;
+  }, 0);
+};
+
+const averageRevenue = function (person) {
+  return totalRevenue(person) /person.length;
+};
